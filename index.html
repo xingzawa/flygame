@@ -1,25 +1,43 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
-<meta charset="UTF-8">
-<title>My Website</title>
-<style>
-body{
-    margin:0;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    height:100vh;
-    background:#111;
-    color:#fff;
-    font-family:sans-serif;
-}
-h1{
-    font-size:3rem;
-}
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Windows Clone</title>
+
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-<h1>Hello, World!</h1>
+
+<div id="desktop">
+
+    <div class="icon">
+        <img src="icons/computer.png">
+        <span>My Computer</span>
+    </div>
+
+    <div class="icon">
+        <img src="icons/folder.png">
+        <span>Documents</span>
+    </div>
+
+</div>
+
+<div id="taskbar">
+
+    <button id="start">
+        Start
+    </button>
+
+    <div id="taskbar-apps"></div>
+
+    <div id="clock">
+        00:00
+    </div>
+
+</div>
+
+<script src="js/main.js"></script>
+
 </body>
 </html>
