@@ -1,42 +1,34 @@
-function updateClock(){
-
-    const now=new Date();
-
-    let h=now.getHours().toString().padStart(2,"0");
-    let m=now.getMinutes().toString().padStart(2,"0");
-
-    document.getElementById("clock").textContent=h+":"+m;
-
+function openWindow(id) {
+  document.getElementById(id).style.display = "block";
 }
 
-updateClock();
+function closeWindow(id) {
+  document.getElementById(id).style.display = "none";
+}
 
-setInterval(updateClock,1000);
+/* 拖动窗口 */
+let dragTarget = null;
+let offsetX = 0;
+let offsetY = 0;
 
-const startButton=document.getElementById("start");
-const startMenu=document.getElementById("start-menu");
+function dragStart(e, el) {
+  dragTarget = el;
+  offsetX = e.clientX - el.offsetLeft;
+  offsetY = e.clientY - el.offsetTop;
 
-let opened=false;
+  document.onmousemove = dragMove;
+  document.onmouseup = dragEnd;
+}
 
-startButton.onclick=()=>{
+function dragMove(e) {
+  if (!dragTarget) return;
 
-    opened=!opened;
+  dragTarget.style.left = (e.clientX - offsetX) + "px";
+  dragTarget.style.top = (e.clientY - offsetY) + "px";
+}
 
-    startMenu.style.display=opened?"block":"none";
-
-};
-
-document.addEventListener("click",(e)=>{
-
-    if(
-        !startMenu.contains(e.target) &&
-        e.target!==startButton
-    ){
-
-        opened=false;
-
-        startMenu.style.display="none";
-
-    }
-
-});
+function dragEnd() {
+  dragTarget = null;
+  document.onmousemove = null;
+  document.onmouseup = null;
+}
