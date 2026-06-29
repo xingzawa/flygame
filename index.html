@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Windows Desktop Clone</title>
+<title>Desktop</title>
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -22,27 +22,25 @@
 
 </div>
 
-<div class="window" id="win1" style="top:100px;left:100px;">
-  <div class="titlebar" onmousedown="dragStart(event, this.parentElement)">
-    <span>文件管理器</span>
+<div class="window" id="win1">
+  <div class="titlebar">
+    文件管理器
     <button onclick="closeWindow('win1')">X</button>
   </div>
   <div class="content">
-    文件内容区域
+    文件内容
   </div>
 </div>
 
-<div class="window" id="win2" style="top:160px;left:200px;">
-  <div class="titlebar" onmousedown="dragStart(event, this.parentElement)">
-    <span>设置</span>
+<div class="window" id="win2">
+  <div class="titlebar">
+    设置
     <button onclick="closeWindow('win2')">X</button>
   </div>
   <div class="content">
-    设置内容区域
+    设置内容
   </div>
 </div>
-
-<div id="taskbar">Windows Clone</div>
 
 <script src="script.js"></script>
 </body>
