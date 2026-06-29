@@ -82,3 +82,55 @@ body{
     text-align:center;
 
 }
+
+#start-menu{
+
+    position:fixed;
+
+    bottom:40px;
+
+    left:0;
+
+    width:260px;
+
+    background:#ECE9D8;
+
+    border:2px solid #245EDB;
+
+    display:none;
+
+    box-shadow:4px 4px 10px rgba(0,0,0,.35);
+
+}
+
+#start-header{
+
+    background:#245EDB;
+
+    color:white;
+
+    padding:12px;
+
+    font-size:22px;
+
+    font-weight:bold;
+
+}
+
+.menu-item{
+
+    padding:12px;
+
+    cursor:pointer;
+
+    font-size:15px;
+
+}
+
+.menu-item:hover{
+
+    background:#316AC5;
+
+    color:white;
+
+}
